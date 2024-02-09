@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+        }
+
+        nav {
+
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        header {
+            width: 100%;
+            height: 67px;
+            position: fixed;
+            background-color: #351d4cf0;
+        }
+
+        .left img {
+            padding: 4px;
+            height: 60px;
+            opacity: 0.86;
+
+        }
+
+        nav ul {
+            display: flex;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 2px 20px;
+            color: rgb(255, 255, 255);
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: rgb(133, 133, 240);
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            min-height: 90vh;
+            /* flex-wrap: wrap-reverse; */
+
+        }
+
+        .purple {
+            color: rgb(133, 59, 202);
+        }
+
+        #element {
+            color: rgb(146, 69, 219);
+            font-size: 2.9rem;
+            ;
+        }
+
+        .rights {
+
+            width: 50%;
+            padding: 88px 0;
+            background-color: transparent;
+        }
+
+        .lefts {
+            padding: 86px 200px;
+            font-size: 1.7rem;
+        }
+
+        .rights img {
+            height: 500px;
+            max-width: 100%;
+            /* opacity: 0.8; */
+        }
+
+        .separate {
+            height: 5px;
+            background-color: rgb(187, 63, 218);
+        }
+
+        .secondsection {
+            display: flex;
+            justify-content: space-around;
+            min-height: 50vh;
+            background-color: transparent;
+        }
+
+        .aboutimg {
+            padding: 73px 0;
+        }
+
+        .aboutimg img {
+
+            width: 100%;
+            height: 73vh;
+            padding: 3px 3px;
+            /* rotate: deg(50%); */
+            border: 2px solid violet;
+            border-radius: 50%;
+        }
+
+        .aboutimg img:hover {
+
+
+            background-color: darkmagenta;
+        }
+
+        .aboutdes {
+            width: 50%;
+        }
+
+        .board {
+
+            display: flex;
+            gap: 149px;
+            padding: 31px 174px;
+            color: #a25fe1;
+
+        }
+
+        .aboutdes h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        .aboutdes .para {
+            color: white;
+            font-size: 1.4rem;
+        }
+
+        .para {
+            padding: 34px 166px;
+
+        }
+
+        .thirdsection {
+            display: flex;
+            min-height: 50vh;
+            justify-content: space-around;
+            padding: 23px 23px;
+            /* background-color: red; */
+        }
+
+        .box1 {
+            text-align: center;
+            width: 30%;
+            border: 2px solid darkviolet;
+            /* border-radius: 30%; */
+        }
+
+        .box1:hover {
+            border: 2px solid rgb(46, 3, 66);
+
+        }
+
+        .box2 {
+            text-align: center;
+            /* background-color: blue; */
+            width: 30%;
+            border: 2px solid darkviolet;
+            /* border-radius: 30%; */
+        }
+
+        .box2:hover {
+            border: 2px solid rgb(46, 3, 66);
+
+        }
+
+        .box3 {
+            text-align: center;
+            /* background-color: black; */
+            width: 30%;
+            border: 2px solid darkviolet;
+            /* border-radius: 30%; */
+        }
+
+        .box3:hover {
+            border: 2px solid rgb(46, 3, 66);
+
+        }
+
+        .skill {
+            display: flex;
+            justify-content: center;
+            font-size: 1.6rem;
+            /* height: 107px; */
+            color: ghostwhite;
+        }
+        #btn
+        {
+            padding: 15px;
+                    margin: 58px 3px ;background-color: aqua;border-radius: 50%
+        }
+        .contact-container
+        {
+            height:100vh;
+            display: flex;
+            background-color: transparent;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-left
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            
+            gap: 20px;
+        }.contact-left button img
+        {
+            height: 20px;
+        }
+        .contact-left-title h2 
+        {
+            font-weight: 600;
+            color: #a363aa;
+            font-size: 40px;
+            margin-bottom: 5px ;
+        }
+        .contact-left-title hr
+        {
+            width: 120px;
+            height: 5px;
+            background-color: #a363aa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-inputs
+        {
+            width: 400px;
+            height: 50px;
+            border: 2px solid #ff994f;
+            background-color: transparent;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color: #a25fe1;
+            border-radius: 50px;
+        }
+        .contact-left textarea{
+            height: 140px;
+            padding-top: 15px;
+            border-radius: 20px;
+        }
+        .contact-inputs:focus
+        {
+            border: 2px solid #ff994f;
+
+        }
+        .contact-inputs::placeholder
+        {
+            color: #a9a9a9;
+        }
+        .contact-left button
+        {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #1b1616;
+            gap: 10px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(270deg,#ff994f,#fa6d86);
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="pngegg.png" alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="firstsection" id="home">
+            <div class="lefts">
+                <h1>Hi, My name is <span class="purple">Uttam</span><br>and I am a passionate <br></h1>
+                <span id="element"></span>
+            </div>
+            <div class="rights">
+                <img src="—Pngtree—children s software programming_5401261 (1).png" alt="">
+            </div>
+        </div>
+        <div class="separate">
+
+        </div>
+        <div class="secondsection" id="about">
+
+            <div class="aboutdes">
+                <h1>About Me</h1>
+                <div class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Quasi praesentium, harum magni velit
+                    cumque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, fuga.
+                    eum natus asperiores adipisci ratione pariatur. Recusandae eveniet dolore excepturi ea aut Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum praesentium eos earum facere? Dolorum veritatis odit consequatur eos quis perferendis blanditiis odio quam. Voluptate vitae natus laudantium inventore fugit iste!
+                    architecto aspernatur odit in! Quaerat voluptate cumque aspernatur rem.
+                </div>
+                <div class="board">
+                    <div class="board1">
+                        <h1>20</h1>
+                    </div>
+                    <div class="board2">
+                        <h1>75</h1>
+                    </div>
+                    <div class="board3">
+                        <h1>650+</h1>
+                        <!-- <span id="ele"></span> -->
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="aboutimg">
+                <img src="22654-6-man.png" alt="">
+            </div>
+        </div>
+        <div class="separate">
+
+        </div>
+        <div class="skill">
+            <h2>Skills</h2>
+        </div>
+        <div class="thirdsection" id="skill">
+
+            <div class="box1">
+                <h1><span id="ele">Front End Developer</span></h1>
+                <div style="height: 115px;"><img src="kindpng_1718210.png" height="100px" alt=""></div>
+                <span style="font-size: 1.4rem;
+            ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi unde, suscipit blanditiis magnam
+                    dolores totam est accusamus delectus. In illum, sapiente animi non amet deserunt dolores magni
+                    quisquam ex quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus asperiores
+                    nam quos adipisci, ex impedit quam cumque explicabo rerum perferendis.</span>
+                    <button id="btn">View Projects</button>
+            </div>
+            <div class="box2">
+                <h1><span id="ele1"></span>
+
+                </h1>
+                <div style="height: 115px;"><img src="kindpng_312036 (1).png" height="100px" alt=""></div>
+                <span style="font-size: 1.4rem;
+            ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi unde, suscipit blanditiis magnam
+                    dolores totam est accusamus delectus. In illum, sapiente animi non amet deserunt dolores magni
+                    quisquam ex quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus asperiores
+                    nam quos adipisci, ex impedit quam cumque explicabo rerum perferendis.</span>
+                    <button id="btn">View Projects</button>
+            </div>
+            <div class="box3">
+                <h1><span id="ele2"></span>
+                </h1>
+                <div style="height: 115px;"><img src="kisspng-python-programming-language-computer-programming-language-5acfdc365292a6.6915108915235717663382.png" height="100px" alt=""></div>
+
+                <span style="font-size: 1.4rem;
+            ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi unde, suscipit blanditiis magnam
+                    dolores totam est accusamus delectus. In illum, sapiente animi non amet deserunt dolores magni
+                    quisquam ex quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus asperiores
+                    nam quos adipisci, ex impedit quam cumque explicabo rerum perferendis.</span>
+                    <button id="btn">View Projects</button>
+            </div>
+        </div>
+        <div class="separate">
+
+        </div>
+       
+        <div  id="contact" class="contact-container">
+                <form  action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                    <div class="contact-left-title">
+                        <h2>Contact Me</h2>
+                        <hr>
+                    </div>
+                    <input type="hidden" name="access_key" value="c0426383-c289-4943-ab4f-54591e8e59bc">
+
+                    <input type="text" placeholder="Your Name" name="name" class="contact-inputs" required>
+                    <input type="email" placeholder="Enter Your Email" name="email" class="contact-inputs" required>
+                    <textarea name="message" type="textarea" placeholder="Your Message" class="contact-inputs" required></textarea>
+                    <button type="submit">Submit <img src="right-arrow_271228.png" alt=""></button>
+                </form>
+        </div>
+        
+    </main>
+   
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Python Programmer', 'Web Designer'],
+            typeSpeed: 50,
+        });
+        var typed = new Typed('#ele', {
+            strings: ['Front End Development'],
+            typeSpeed: 200,
+        });
+        var typed = new Typed('#ele1', {
+            strings: ['Java Programming'],
+            typeSpeed: 200,
+        });
+        var typed = new Typed('#ele2', {
+            strings: ['Python Programming'],
+            typeSpeed: 200,
+        });
+    </script>
+</body>
+
+</html>
